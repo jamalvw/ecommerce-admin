@@ -21,7 +21,7 @@ export async function POST(
     const { productIds } = await req.json();
 
     if (!productIds || productIds.length === 0)
-        return new NextResponse("Product IDS are required", { status: 400 });
+        return new NextResponse("Product IDs are required", { status: 400 });
 
     const products = await prismadb.product.findMany({
         where: {
@@ -70,7 +70,7 @@ export async function POST(
             enabled: true
         },
         success_url: `${process.env.FRONTEND_STORE_URL}/cart?success=1`,
-        cancel_url: `${process.env.FRONTEND_STORE_URL}/cart?canceled=1`,
+        cancel_url: `${process.env.FRONTEND_STORE_URL}/cart?cancelled=1`,
         metadata: {
             orderId: order.id
         }
