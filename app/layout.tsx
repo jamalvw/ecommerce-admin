@@ -13,8 +13,8 @@ import { ThemeProvider } from '@/providers/theme-provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Admin Dashboard',
-  description: 'Admin Dashboard',
+  title: 'UrbanCart',
+  description: 'UrbanCart',
 }
 
 export default function RootLayout({
